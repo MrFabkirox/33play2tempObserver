@@ -1,0 +1,42 @@
+@(someValue: Integer)
+@import helper._
+
+@main("33play2tempObserver") {
+	
+	<h2>page2</h2>
+
+    @someValue
+    
+    <div class="formz">
+    	<table style="background-color: #008888">
+    		<tr>
+    			<td><input type="button" name="up" value=" up ! " id="up" onclick="up()"></td>
+    			<td><input type="button" name="down" id="down" value="down !" onclick="down()"></td>
+    			<td><input type="textarea" name="textA" id="textA" value="someValue ?"></td>
+    			<td><p id="result"> result </p></td>
+    		</tr>
+    	</table>
+    </div>
+    
+    <script>
+		function up() {
+			document.getElementById("result").innerHTML = 2;
+		}
+		function down() {
+			document.getElementById("result").innerHTML = 1;
+		}
+		function doStuff() {
+			document.write("if 2 do ... else do ...");
+			console.log("console");
+		}
+    </script>
+    
+    <h2> to fill the page 3 with some json: </h2>
+    
+    @helper.form(action=routes.Application.page3()) {
+    	<input name="author">
+    	<input name="message">
+    	<input type="submit">
+    }
+	
+}
