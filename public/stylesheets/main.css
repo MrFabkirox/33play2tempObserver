@@ -1,0 +1,31 @@
+/* nice white to blue menu */
+
+.menu {
+	width: 130px;
+	list-style: none;
+	padding: 4px;
+	margin: 0;
+	background: #F2F2F2;
+}
+
+.item, .item a {
+	display: block;
+}
+
+.item a {
+	margin: 1px 0;
+	padding: 8px 20px;
+	color: #666;
+	background: #FFF;
+	text-decoration: none;
+	
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	transition: all .3s;
+}
+
+.item a:hover, .item a:focus {
+	background: #1ABC9C;
+	color: #FFF;
+	padding-left: 30px;
+}
